@@ -1,0 +1,15 @@
+{{#with movie}}
+<h2>{{this.title}} (<a href="/movies/{{this._id}}/edit">Edit</a>)</h2>
+    <div>
+        <ul>
+            <li>Genre : {{this.genre}}</li>
+            <li>Plot : {{this.plot}}</li>
+            <li><ul> Cast : 
+                    {{#each this.cast}}
+                        <li>{{name}}, is doing {{occupation}} saying a lot "{{catchPhrase}}"</li>
+                    {{/each }}
+                </ul> 
+            </li>
+        </ul>
+    </div>
+{{/with}}
